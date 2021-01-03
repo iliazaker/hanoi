@@ -82,8 +82,24 @@ class MyCustomPainter extends CustomPainter {
       ..color = Colors.yellow
       ..strokeWidth = 4;
     canvas.drawLine(
-        Offset(size.width / 2.0, 10),
-        Offset(size.width / 2.0, size.height - 10),
+        Offset(size.width / 1.3, 10),
+        Offset(size.width / 1.3, size.height - 10),
+        paint2
+    );
+    var paint3 = Paint()
+      ..color = Colors.yellow
+      ..strokeWidth = 4;
+    canvas.drawLine(
+        Offset(size.width / 2.01, 10),
+        Offset(size.width / 2.01, size.height - 10),
+        paint2
+    );
+    var paint4 = Paint()
+      ..color = Colors.yellow
+      ..strokeWidth = 4;
+    canvas.drawLine(
+        Offset(size.width / 4.5, 10),
+        Offset(size.width / 4.5, size.height - 10),
         paint2
     );
   }
