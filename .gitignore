@@ -47,3 +47,5 @@ gradlew
 gradlew.bat
 
 local.properties
+
+pubspec.lock
