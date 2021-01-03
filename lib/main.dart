@@ -64,7 +64,7 @@ class MyCustomPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
 
     var paint = Paint()
-      ..color = Colors.red
+      ..color = Colors.lightBlueAccent
       ..strokeWidth = 4;
 
     canvas.drawRect(
@@ -74,7 +74,7 @@ class MyCustomPainter extends CustomPainter {
         paint);
 
     var paint2 = Paint()
-      ..color = Colors.green
+      ..color = Colors.yellow
       ..strokeWidth = 4;
     canvas.drawLine(
         Offset(size.width / 2.0, 10),
