@@ -66,8 +66,15 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class MyCustomPainter extends CustomPainter {
+
+  double columnX(int columnNumber, double width) {
+    return (columnNumber * 2.0 - 1.0) * width / 6.0;
+  }
+
   @override
   void paint(Canvas canvas, Size size) {
+
+    var towerThickness = 8.0;
 
     var paint = Paint()
       ..color = Colors.lightBlueAccent
@@ -81,26 +88,26 @@ class MyCustomPainter extends CustomPainter {
 
     var paint2 = Paint()
       ..color = Colors.yellow
-      ..strokeWidth = 4;
+      ..strokeWidth = towerThickness;
+
+    var x1 = columnX(1, size.width);
     canvas.drawLine(
-        Offset(size.width / 1.3, 10),
-        Offset(size.width / 1.3, size.height - 10),
+        Offset(x1, 10),
+        Offset(x1, size.height - 10),
         paint2
     );
-    var paint3 = Paint()
-      ..color = Colors.yellow
-      ..strokeWidth = 4;
+
+    var x2 = columnX(2, size.width);
     canvas.drawLine(
-        Offset(size.width / 2.01, 10),
-        Offset(size.width / 2.01, size.height - 10),
+        Offset(x2, 10),
+        Offset(x2, size.height - 10),
         paint2
     );
-    var paint4 = Paint()
-      ..color = Colors.yellow
-      ..strokeWidth = 4;
+
+    var x3 = columnX(3, size.width);
     canvas.drawLine(
-        Offset(size.width / 4.5, 10),
-        Offset(size.width / 4.5, size.height - 10),
+        Offset(x3, 10),
+        Offset(x3, size.height - 10),
         paint2
     );
   }
